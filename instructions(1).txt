@@ -1,0 +1,68 @@
+Instructions:
+
+1) Connect to VT VPN  to get on their wifi
+	instructions here: https://www.nis.vt.edu/ServicePortfolio/Network/RemoteAccess-VPN.html
+
+2) Connect to ARC via: https://ood.arc.vt.edu/pun/sys/dashboard/
+
+3) Once in OOD, click on VS Code
+
+4) Fill out the document; these are the options I chose
+	-- Cluster = TinkerCliffs - flagship CPU and GPU cluster
+	-- partition = a100_normal_q --- NOTE: ensure the partition you choose supports GPU
+	-- Account = cmda4864spring2026 
+	-- num hrs = 2
+	-- num cores = 1
+	-- working directory = n/a (I left this empty)
+	-- num GPUs = 2
+	-- did not click on either checkboxes at bottom
+	
+5) clone repo once inside & then open a termial in VS Code
+
+6) make python environment, run these:
+	cmd: python -m venv capstone
+		--> you are naming your virtual environment "capstone"
+
+7) activate 
+	cmd: source capstone/bin/activate
+	
+	(deactivate, later)
+	cmd: deactivate
+
+8) install missing packages
+	cmd: pip install cellpose    <- These can take a while to install
+		 pip install omnipose    <-
+		 pip install supervision
+		 pip install Pillow
+		 pip install numpy
+		 pip install matplotlib
+		 pip install tifffile
+		 pip install scikit-learn
+		 pip install scikit-image
+		 
+	If you get errors when running try:
+		 pip install cellpose_omni
+	
+9) change file paths at the beginning of complete_process_merged.py
+
+10) run!
+	cmd: python complete_process_merged.py
+	or try cmd: python3 complete_process_merged.py
+
+11) General Notes:	
+	*All cmds are for the terminal
+
+	*In the terminal, I could ensure that I was running my code in the environment
+	*You might have to
+		cmd: cd "folder_name"
+	where "folder_name" is the name where complete_process.py is housed
+	if the script isn't in your main directory (which mine was not)
+	*Make sure the environment is activated
+
+	*You do not need to build a new environment everytime you log onto
+	ARC, just activate
+
+	* For information on the GUI, see "omnipose_gui" folder -> "instructions.txt"
+
+	* To pull and push from ARC terminal ensure your SSH key is activated,
+	  if you are having trouble activating it, we suggest contacting a 3634 instructor
