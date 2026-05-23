@@ -1,0 +1,35 @@
+Omnipose GUI setup directions
+
+In your own terminal (not on ARC)
+1. Create the environment:
+   conda create -n omnipose python=3.10.12 pytorch
+
+2. Activate the environment:
+   conda activate omnipose
+
+3. If you previously installed cellpose_omni, remove it:
+   pip uninstall cellpose_omni
+   pip cache remove cellpose_omni
+
+4. Install Omnipose:
+   pip install omnipose
+
+5. Launch the GUI:
+   python -m omnipose
+
+
+Using the GUI:
+- Open the Omnipose window.
+- Drag and drop your image into the right side of the GUI.
+- Click "segment image".
+- For more information: https://omnipose.readthedocs.io/gui.html
+
+Important notes:
+   - Be sure to change the segmentation model to match your needs (we used cyto2_omni and cyto2)
+   - If the "cell diameter" field is significantly different from the true cell diameter in your image, the GUI may stall.
+     Try adjusting the value until the image segments in under about 10 seconds.
+
+
+
+
+
