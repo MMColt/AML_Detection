@@ -7,7 +7,6 @@ from PIL import Image
 #from cellpose import models
 from cellpose_omni import models
 import supervision as sv
-from pathlib import Path
 
 # standard library
 from collections import Counter
