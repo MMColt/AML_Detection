@@ -55,7 +55,7 @@ Instructions:
 	*In the terminal, I could ensure that I was running my code in the environment
 	*You might have to
 		cmd: cd "folder_name"
-	where "folder_name" is the name where complete_process.py is housed
+	where "folder_name" is the name where complete_process_merged.py is housed
 	if the script isn't in your main directory (which mine was not)
 	*Make sure the environment is activated
 
